@@ -45,7 +45,7 @@ export default {
     },
     checkAccordionItem(index){
       if (this.$children[0].$children[index].uniqueId == null){
-        this.$children[0].$children[index].setUniqueId((this.apidocs.length - 1).toString())
+        this.$children[0].$children[index].setUniqueId((index).toString())
         this.$children[0].$children[index].notifyOfClick()
       }
     }
