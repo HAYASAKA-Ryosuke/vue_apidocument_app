@@ -6,6 +6,9 @@
             API Document
           </a>
         </div>
+        <div>
+        <createApiModal v-show="showForm" @close="showForm = false"></createApiModal>
+        </div>
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="field is-grouped" style="margin-right: 30px">
@@ -31,7 +34,7 @@
                 </div>
               </div>
               <p class="control">
-                <a class="button is-primary" v-on:click="addAPI()">
+                <a class="button is-primary" @click="showForm = true">
                   <span>
                     Create
                   </span>
@@ -45,8 +48,13 @@
 </template>
 <script>
 
+import createApiModal from '~/components/createApiModal'
 export default {
   components: {
+    createApiModal
+  },
+  data() {
+      return {showForm: false}
   },
   methods: {
     addAPI (e) {

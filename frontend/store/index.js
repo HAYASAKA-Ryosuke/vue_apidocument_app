@@ -12,9 +12,8 @@ const store = () => new Vuex.Store({
     async getApidocs(state){
       axios.get('http://127.0.0.1:8000/apidocs/').then(response => { state.commit('getApidocs', response.data) })
     },
-    async postApidocs(state){
-      axios.post('http://127.0.0.1:8000/apidocs/', {title: 'ハム作成API', url: 'https://hameggspam/hams/', method: 'POST', description: "# ハムを作るためのAPIです"}).then(response => {  })
-      axios.get('http://127.0.0.1:8000/apidocs/').then(response => { state.commit('getApidocs', response.data) })
+    async postApidocs(state, form){
+      axios.post('http://127.0.0.1:8000/apidocs/', {title: form.title, url: form.url, method: form.method, description: form.description}).then(response => {  axios.get('http://127.0.0.1:8000/apidocs/').then(response => { state.commit('getApidocs', response.data) })})
     },
   },
   mutations: {
