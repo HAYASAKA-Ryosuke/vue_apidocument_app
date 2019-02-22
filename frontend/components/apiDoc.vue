@@ -14,8 +14,8 @@
   >
       <div  v-on:click="checkAccordionItem(index)" v-for="(apidoc, index) in apidocs" :key=index >
         <BulmaAccordionItem>
-            <h4 slot="title"><span class="tag" v-bind:class="[boxMethodColors[apidoc.method]]">{{ apidoc.method }}</span><strong>{{apidoc.url}}</strong><p>{{ apidoc.title }}</p></h4>
-            <div class="content is-1" slot="content" v-html="$md.render(apidoc.description)"></div>
+          <h4 slot="title"><span class="tag" v-bind:class="[boxMethodColors[apidoc.method]]">{{ apidoc.method }}</span> <strong>{{apidoc.url}}</strong> {{ apidoc.title }}</h4>
+          <div class="content is-1" slot="content" v-html="$md.render(apidoc.description)"></div>
         </BulmaAccordionItem>
       </div>
   </BulmaAccordion>
