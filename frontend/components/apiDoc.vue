@@ -10,7 +10,7 @@
           duration: '.2s',
           timerFunc: 'ease'
       }"
-      style='padding-top: 80px; padding-left: 40px; padding-right: 40px;'
+      style='padding-top: 80px; padding-left: 40px; padding-right: 40px; padding-bottom: 80px;'
   >
       <div  v-on:click="checkAccordionItem(index)" v-for="(apidoc, index) in apidocs" :key=index >
         <BulmaAccordionItem>
