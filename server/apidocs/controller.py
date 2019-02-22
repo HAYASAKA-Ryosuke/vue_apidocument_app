@@ -10,5 +10,5 @@ def get_list(request):
 
 def create_apidoc(request):
     data = json.loads(request.data)
-    api_doc = ApiDoc.create(url=data.get('url'), method=data.get('method'), description=data.get('description', ''))
+    api_doc = ApiDoc.create(title=data.get('title'), url=data.get('url'), method=data.get('method'), description=data.get('description', ''))
     return model_to_dict(api_doc)
