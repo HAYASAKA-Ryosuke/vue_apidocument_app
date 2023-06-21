@@ -21,7 +21,7 @@
     "bulma-extensions": "^4.1.1",
     "cross-env": "^5.2.0",
     "mavon-editor": "^2.6.17",
-    "nuxt": "^2.4.0",
+    "nuxt": "^3.4.3",
     "vue-bulma-accordion": "^0.4.6"
   },
   "devDependencies": {
